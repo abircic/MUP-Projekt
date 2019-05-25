@@ -1,0 +1,529 @@
+<html>
+
+<head>
+	<title>Registracijska forma</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			background-image: url('./bg-img.jpg');
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+
+		.logo {
+			padding-top: 10px;
+			margin: auto;
+			width: 150px;
+		}
+
+		.wrap {
+			width: 600px;
+			margin: auto;
+			margin-top: 30px;
+			padding: 20px;
+		}
+
+		h1 {
+			text-align: center;
+			color: black;
+			font-size: 30px;
+			margin: 10px;
+		}
+
+		h2 {
+			text-align: center;
+			color: black;
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		h3 {
+			font-size: 12px;
+		}
+
+
+
+		.checkbox {
+			padding: 10px;
+		}
+
+		input[type=text],
+		input[type=number],
+		input[type=mail],
+		input[type=password] {
+			background-color: white;
+			margin: auto;
+			padding: 5px;
+			margin: 2px;
+			border-radius: 20px;
+			border: none;
+			width: 60%;
+		}
+
+		button {
+			width: 100%;
+			height: 50px;
+			font-size: 20px;
+			font-weight: bold;
+			color: black;
+			border: 1px solid whitesmoke;
+			border-radius: 15px;
+			background-color: lightgreen;
+		}
+
+		form {
+			padding: 5px;
+			display: none;
+			flex-direction: column;
+			align-items: center;
+			font-family: arial;
+			border: 1px solid;
+			background-color: #e6f2ff;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		form.visible {
+			display: flex;
+		}
+
+		.row {
+			width: 90%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.row label {
+			display: flex;
+			align-items: center;
+			width: 90px;
+		}
+
+		.row.checkbox-wrap {
+			flex-direction: column;
+		}
+
+		.row.checkbox-wrap>div {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.row.checkbox-wrap .checkbox {
+			display: flex;
+			align-items: center;
+		}
+
+		.row.checkbox-wrap .checkbox input {
+			margin-right: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<form id="new-registration" class="visible">
+			<img src="./logo.png" class="logo">
+			<h1>Registracija</h1>
+			<div class="row">
+				*Ime:
+				<input type="text" name="Ime" placeholder="Upišite ime" required/>
+			</div>
+			<div class="row">
+				*Prezime:
+				<input type="text" name="Prezime" placeholder="Upišite prezime" required/>
+			</div>
+			<div class="row">
+				OIB:
+				<input type="number" name="oib" placeholder="Upišite OIB" />
+			</div>
+			<div class="row">
+				Kategorija:
+				<input type="text" name="kategorija" placeholder="Npr. A, B, B C, D, E, F, G i H" />
+			</div>
+			<div class="row">
+				*Spol:
+				<label>
+					<input type="radio" name="sex" value="Musko" />Musko
+				</label>
+				<label>
+					<input type="radio" name="sex" value="Zensko" />Zensko
+				</label>
+			</div>
+			<div class="row">
+				*Grad
+				<input type="text" name="Grad" placeholder="Upišite grad" required/>
+			</div>
+			<div class="row">
+				*Država:
+				<input type="text" name="Drzava" placeholder="Upišite drzavu" required/>
+			</div>
+			<div class="row">
+				*Adresa:
+				<input type="text" name="Adresa" placeholder="Upišite adresu" required/>
+			</div>
+			<div class="row">
+				*Kučni broj:
+				<input type="number" name="Kucni_broj" placeholder="Kucni broj" required/>
+			</div>
+			<div class="row">
+				*Poštanski broj:
+				<input type="number" name="Postanski_broj" placeholder="Postanski broj" required/>
+			</div>
+			<div class="row">
+				*Broj telefona:
+				<input type="number" name="Broj_telefona" placeholder="Upišite broj" required/>
+			</div>
+			<div class="row">
+				Mail:
+				<input type="mail" name="Mail" placeholder="Upišite mail" required/>
+			</div>
+			<div class="row">
+				*Sifra:
+				<input type="password" name="Sifra" placeholder="Upišite sifru" required/>
+			</div>
+			<div class="row">
+				*Ponovi sifru:
+				<input type="password" name="Sifra2" placeholder="Ponovite sifru" required/>
+			</div>
+			<div class="row checkbox-wrap">
+				Obavezno ispunite sva polja označena znakom * Odaberite vozilo za vašu testnu vožnju:
+				<div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal1" value="Up" />Up
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal2" value="Polo" />Polo
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal3" value="Golf" />Golf
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal4" value="T-Roc" />T-Roc
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal5" value="Tiguan" />Tiguan
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal6" value="Touareg" />Touareg
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal7" value="Passat" />Passat
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal8" value="Arteon" />Arteon
+					</div>
+				</div>
+			</div>
+			<button type="submit">Pošalji</button>
+		</form>
+		<form id="confirmation">
+			<h1>Potvrda testne voznje</h1>
+			<div class="row">
+				Ime:
+				<input type="text" name="ImeKorisnik" />
+			</div>
+			<div class="row">
+				Prezime:
+				<input type="text" name="PrezimeKorisnik" />
+			</div>
+			<div class="row">
+				OIB:
+				<input type="number" name="oibKorisnik" />
+			</div>
+			<div class="row">
+				Kategorija:
+				<input type="text" name="kategorijaKorisnik" />
+			</div>
+			<div class="row">
+				Spol:
+				<input type="text" name="sexKorisnik" />
+			</div>
+			<div class="row">
+				Grad:
+				<input type="text" name="GradKorisnik" />
+			</div>
+			<div class="row">
+				Država:
+				<input type="text" name="DrzavaKorisnik" />
+			</div>
+			<div class="row">
+				Adresa:
+				<input type="text" name="AdresaKorisnik">
+			</div>
+			<div class="row">
+				Kučni broj:
+				<input type="number" name="Kucni_brojKorisnik" />
+			</div>
+			<div class="row">
+				Poštanski broj:
+				<input type="number" name="Postanski_brojKorisnik" />
+			</div>
+			<div class="row">
+				Broj telefona:
+				<input type="number" name="Broj_telefonaKorisnik" />
+			</div>
+			<div class="row">
+				Mail:
+				<input type="mail" name="MailKorisnik" />
+			</div>
+			<div class="row checkbox-wrap">
+				Odaberite vozilo za vašu testnu vožnju:
+				<div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal1Korisnik" value="Up" />Up
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal2Korisnik" value="Polo" />Polo
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal3Korisnik" value="Golf" />Golf
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal4Korisnik" value="T-Roc" />T-Roc
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal5Korisnik" value="Tiguan" />Tiguan
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal6Korisnik" value="Touareg" />Touareg
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal7Korisnik" value="Passat" />Passat
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="artikal8Korisnik" value="Arteon" />Arteon
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script>
+		function provjeraStringa(a) {
+			return !(/[0-9]/).test(a) && a.length
+		}
+		function provjeraBroja(b) {
+			return !((/[a-z]/).test(b.toLowerCase()) && b.length)
+		}
+		function provjeraMaila(c) {
+			return (/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/).test(c) && c.length
+		}
+		var firstNameDOM = document.querySelector('input[type=text][name=Ime]')
+		var firstNameUserDOM = document.querySelector('input[type=text][name=ImeKorisnik]')
+		console.log(firstNameDOM)
+		firstNameDOM.addEventListener("blur", function () {
+			console.log(firstNameDOM.value)
+			var ime = firstNameDOM.value
+			if (!provjeraStringa(ime))
+				alert('Neispravan unos imena')
+			else
+				firstNameUserDOM.value = ime
+		})
+
+		var lastNameDOM = document.querySelector('input[type=text][name=Prezime]')
+		var lastNameUserDOM = document.querySelector('input[type=text][name=PrezimeKorisnik]')
+		console.log(lastNameDOM)
+		lastNameDOM.addEventListener("blur", function () {
+			console.log(lastNameDOM.value)
+			var prezime = lastNameDOM.value
+			if (!provjeraStringa(prezime))
+				alert('Neispravan unos prezimena')
+			else
+				lastNameUserDOM.value = prezime
+		})
+		var OIBDOM = document.querySelector('input[type=number][name=oib]')
+		var OIBUserDOM = document.querySelector('input[type=number][name=oibKorisnik]')
+		console.log(OIBDOM)
+		OIBDOM.addEventListener("blur", function () {
+			console.log(OIBDOM.value)
+			var o = OIBDOM.value
+			if (!provjeraBroja(o))
+				alert('Neispravan unos OIB-a')
+			else
+				OIBUserDOM.value = o
+		})
+		var categoryDOM = document.querySelector('input[type=text][name=kategorija]')
+		var categoryUserDOM = document.querySelector('input[type=text][name=kategorijaKorisnik]')
+		console.log(categoryDOM)
+		categoryDOM.addEventListener("blur", function () {
+			console.log(categoryDOM.value)
+			var kategorija = categoryDOM.value
+			if (!provjeraStringa(kategorija))
+				alert('Neispravan unos kategorije')
+			else
+				categoryUserDOM.value = kategorija
+
+			var cityDOM = document.querySelector('input[type=text][name=Grad]')
+			var cityUserDom = document.querySelector('input[type=text][name=GradKorisnik]')
+			console.log(cityDOM)
+			cityDOM.addEventListener("blur", function () {
+				console.log(cityDOM.value)
+				var grad = cityDOM.value
+				if (!provjeraStringa(grad))
+					alert('Neispravan unos grada')
+				else
+					cityUserDom.value = grad
+			})
+			var countryDOM = document.querySelector('input[type=text][name=Drzava]')
+			var countryUserDom = document.querySelector('input[type=text][name=DrzavaKorisnik]')
+			console.log(countryDOM)
+			countryDOM.addEventListener("blur", function () {
+				console.log(countryDOM.value)
+				var drzava = countryDOM.value
+				if (!provjeraStringa(drzava))
+					alert('Neispravan unos drzave')
+				else
+					countryUserDom.value = drzava
+			})
+
+			var adressDOM = document.querySelector('input[type=text][name=Adresa]')
+			var adressUserDOM = document.querySelector('input[type=text][name=AdresaKorisnik]')
+			console.log(adressDOM)
+			adressDOM.addEventListener("blur", function () {
+				console.log(adressDOM.value)
+				var adresa = adressDOM.value
+				if (!adresa.length)
+					alert('Neispravan unos adrese')
+				else
+					console.log(adressUserDOM.value)
+				adressUserDOM.value = adresa
+			})
+
+			var adressNumDOM = document.querySelector('input[type=number][name=Kucni_broj]')
+			var adressNumUserDOM = document.querySelector('input[type=number][name=Kucni_brojKorisnik]')
+			console.log(adressNumDOM)
+			adressNumDOM.addEventListener("blur", function () {
+				console.log(adressNumDOM.value)
+				var kucni_broj = adressNumDOM.value
+				if (!provjeraBroja(kucni_broj))
+					alert('Neispravan unos kucnog broja')
+				else
+					adressNumUserDOM.value = kucni_broj
+			})
+
+			var postalcodeDOM = document.querySelector('input[type=number][name=Postanski_broj]')
+			var postalcodeUserDOM = document.querySelector('input[type=number][name=Postanski_brojKorisnik]')
+			console.log(postalcodeDOM)
+			postalcodeDOM.addEventListener("blur", function () {
+				console.log(postalcodeDOM.value)
+				var postanski_broj = postalcodeDOM.value
+				if (!provjeraBroja(postanski_broj))
+					alert('Neispravan unos postanskog broja')
+				else
+					postalcodeUserDOM.value = postanski_broj
+			})
+
+			var phoneDOM = document.querySelector('input[type=number][name=Broj_telefona]')
+			var phoneUserDOM = document.querySelector('input[type=number][name=Broj_telefonaKorisnik]')
+			console.log(phoneDOM)
+			phoneDOM.addEventListener("blur", function () {
+				console.log(phoneDOM.value)
+				var telefon = phoneDOM.value
+				if (!provjeraBroja(telefon))
+					alert('Neispravan unos telefona')
+				phoneUserDOM.value = telefon
+			})
+
+			var emailDOM = document.querySelector('input[type=mail][name=Mail]')
+			var emailUserDOM = document.querySelector('input[type=mail][name=MailKorisnik]')
+			console.log(emailDOM)
+			emailDOM.addEventListener("blur", function () {
+				console.log(emailDOM.value)
+				var mail = emailDOM.value
+				if (!provjeraMaila(mail))
+					alert('Neispravan unos maila')
+				else
+					emailUserDOM.value = mail
+			})
+
+			var passwordDOM = document.querySelector('input[type=password][name=Sifra]')
+			console.log(passwordDOM)
+			var password2DOM = document.querySelector('input[type=password][name=Sifra2]')
+			console.log(password2DOM)
+			var submitDOM = document.querySelector('button[type=submit]')
+			console.log(submitDOM)
+			submitDOM.addEventListener("click", function () {
+				console.log(passwordDOM.value)
+				console.log(password2DOM.value)
+				var sifra1 = passwordDOM.value
+				var sifra2 = password2DOM.value
+				if (sifra1 !== sifra2)
+					alert('Pogresan unos sifre')
+			})
+		})
+		var spolDOM = document.querySelector('input[type=radio][name=sex]')
+		var spolUserDom = document.querySelector('input[type=text][name=sexKorisnik]')
+		console.log(spolDOM)
+		var odabir1DOM = document.querySelector('input[type=checkbox][name=artikal1]')
+		var odabir1KorisnikDOM = document.querySelector('input[type=checkbox][name=artikal1Korisnik]')
+		console.log(odabir1DOM)
+		var odabir2DOM = document.querySelector('input[type=checkbox][name=artikal2]')
+		var odabir2KorisnikDOM = document.querySelector('input[type=checkbox][name=artikal2Korisnik]')
+		console.log(odabir2DOM)
+		var odabir3DOM = document.querySelector('input[type=checkbox][name=artikal3]')
+		var odabir3KorisnikDOM = document.querySelector('input[type=checkbox][name=artikal3Korisnik]')
+		console.log(odabir3DOM)
+		var odabir4DOM = document.querySelector('input[type=checkbox][name=artikal4]')
+		var odabir4KorisnikDOM = document.querySelector('input[type=checkbox][name=artikal4Korisnik]')
+		console.log(odabir4DOM)
+		var odabir5DOM = document.querySelector('input[type=checkbox][name=artikal5]')
+		var odabir5KorisnikDOM = document.querySelector('input[type=checkbox][name=artikal5Korisnik]')
+		console.log(odabir5DOM)
+		var odabir6DOM = document.querySelector('input[type=checkbox][name=artikal6]')
+		var odabir6KorisnikDOM = document.querySelector('input[type=checkbox][name=artikal6Korisnik]')
+		console.log(odabir6DOM)
+		var odabir7DOM = document.querySelector('input[type=checkbox][name=artikal7]')
+		var odabir7KorisnikDOM = document.querySelector('input[type=checkbox][name=artikal7Korisnik]')
+		console.log(odabir7DOM)
+		var odabir8DOM = document.querySelector('input[type=checkbox][name=artikal8]')
+		var odabir8KorisnikDOM = document.querySelector('input[type=checkbox][name=artikal8Korisnik]')
+		console.log(odabir8DOM)
+		var submitDOM = document.querySelector('button[type=submit]')
+		console.log(submitDOM)
+		var newRegForm = document.getElementById('new-registration')
+		var confirmationForm = document.getElementById('confirmation')
+		submitDOM.addEventListener("click", function (event) {
+			event.preventDefault()
+			console.log(odabir1DOM)
+			console.log(odabir2DOM)
+			console.log(odabir3DOM)
+			console.log(odabir4DOM)
+			console.log(odabir5DOM)
+			console.log(odabir6DOM)
+			console.log(odabir7DOM)
+			console.log(odabir8DOM)
+			var provjera = spolDOM.value
+			var provjera_1 = odabir1DOM.checked
+			var provjera_2 = odabir2DOM.checked
+			var provjera_3 = odabir3DOM.checked
+			var provjera_4 = odabir4DOM.checked
+			var provjera_5 = odabir5DOM.checked
+			var provjera_6 = odabir6DOM.checked
+			var provjera_7 = odabir7DOM.checked
+			var provjera_8 = odabir8DOM.checked
+			if (!(provjera_1 || provjera_2 || provjera_3 || provjera_4 || provjera_5 || provjera_6 || provjera_7 || provjera_8))
+				alert('Artikal nije odabran')
+			else if (!provjera)
+				alert('Spol nije odabran')
+			else {
+				spolUserDom.value = provjera
+				odabir1KorisnikDOM.checked = provjera_1
+				odabir2KorisnikDOM.checked = provjera_2
+				odabir3KorisnikDOM.checked = provjera_3
+				odabir4KorisnikDOM.checked = provjera_4
+				odabir5KorisnikDOM.checked = provjera_5
+				odabir6KorisnikDOM.checked = provjera_6
+				odabir7KorisnikDOM.checked = provjera_7
+				odabir8KorisnikDOM.checked = provjera_8
+				newRegForm.classList.remove('visible')
+				confirmationForm.classList.add('visible')
+			}
+
+		})
+
+	</script>
+
+</body>
+
+</html>
